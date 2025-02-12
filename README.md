@@ -7,12 +7,12 @@ Detta är ett Spring Boot-projekt som tillhandahåller ett API för att hantera 
 ## Steg för att bygga och köra applikationen
 
 ### 1. Ladda hem dependencies
-• Spring Boot DevTools
-• Spring Web
-• Spring Web Services
-• Spring Data JPA
-• H2 Database
-• Lombok
+    Spring Boot DevTools
+    Spring Web
+    Spring Web Services
+    Spring Data JPA
+    H2 Database
+    Lombok
 
 ### 2. Klona och bygg projektet
 Klona detta repository till din dator och sedan navigera till projektmappen och bygg applikationen med Gradle
