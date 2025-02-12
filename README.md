@@ -22,10 +22,12 @@ Klona detta repository till din dator och sedan navigera till projektmappen och 
 
 ### 4. Använd API:t
 När applikationen körs, kommer ett användargränssnitt att visas i din terminal. Du kommer att få följande alternativ:
-	1.	Hämta alla böcker
-	2.	Hämta en specifik bok genom titel
-	3.	Hämta böcker baserat på kategori
-	4.	Skapa en ny bok
-	5.	Avsluta
+
+1. Hämta alla böcker  
+2. Hämta en specifik bok genom titel  
+3. Hämta böcker baserat på kategori  
+4. Skapa en ny bok  
+5. Avsluta
+   
 Välj ett alternativ genom att skriva in motsvarande nummer och tryck Enter. Du kommer därefter får feedback på ditt val.
 
