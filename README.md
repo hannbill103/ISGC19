@@ -1,12 +1,12 @@
 # ISGC19
 
-# Spring Boot API för Bokhantering
+# Spring Boot API for book management
 
-Detta är ett Spring Boot-projekt som tillhandahåller ett API för att hantera böcker. Det använder en H2-databas för lagring av bokdata och erbjuder CRUD-operationer via REST.
+This is a Spring Boot project that provides an API for managing books. It uses an H2 database for storing book data and offers CRUD operations via REST.
 
-## Steg för att bygga och köra applikationen
+## Steps to build and run the application
 
-### 1. Ladda hem dependencies
+### 1. Download dependencies
     Spring Boot DevTools
     Spring Web
     Spring Web Services
@@ -14,20 +14,20 @@ Detta är ett Spring Boot-projekt som tillhandahåller ett API för att hantera 
     H2 Database
     Lombok
 
-### 2. Klona och bygg projektet
-Klona detta repository till din dator och sedan navigera till projektmappen och bygg applikationen med Gradle
+### 2. Clone and build the project
+Clone this repository to your computer and then navigate to the project folder and build the application with Gradle
 
-### 3. Kör programmet
- För att köra och testa API:t startar du BookapiApplication samt BookClient
+### 3. Run the program
+To run and test the API, start BookapiApplication and BookClient
 
-### 4. Använd API:t
-När applikationen körs, kommer ett användargränssnitt att visas i din terminal. Du kommer att få följande alternativ:
+### 4. Use the API
+When the application runs, a user interface will appear in your terminal. You will get the following options:
 
-1. Hämta alla böcker  
-2. Hämta en specifik bok genom titel  
-3. Hämta böcker baserat på kategori  
-4. Skapa en ny bok  
-5. Avsluta
+1. Hämta alla böcker (Retrieve all books)
+2. Hämta en specifik bok genom titel (Retrieve a specific book by title)
+3. Hämta böcker baserat på kategori (Retrieve books by category)
+4. Skapa en ny bok (Create a new book)
+5. Avsluta (Exit)
    
-Välj ett alternativ genom att skriva in motsvarande nummer och tryck Enter. Du kommer därefter får feedback på ditt val.
+Select an option by typing the corresponding number and press Enter. You will then receive feedback on your choice.
 
