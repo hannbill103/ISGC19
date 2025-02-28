@@ -30,6 +30,9 @@ public class BookClient {
                     createNewBook();  // Skapa en ny bok
                     break;
                 case 5:
+                    deleteBook();  // Ta bort en bok
+                    break;
+                case 6:
                     System.out.println("Avslutar...");
                     return;  // Avsluta programmet
                 default:
@@ -45,7 +48,8 @@ public class BookClient {
         System.out.println("2. Hämta en specifik bok genom titel");
         System.out.println("3. Hämta böcker baserat på kategori");
         System.out.println("4. Skapa en ny bok");
-        System.out.println("5. Avsluta");
+        System.out.println("5. Ta bort en bok genom ID");
+        System.out.println("6. Avsluta");
         System.out.print("Välj ett alternativ: ");
     }
 
@@ -163,4 +167,27 @@ public class BookClient {
             System.out.println("Fel vid skapande av bok: " + e.getMessage());
         }
     }
+    // Ta bort en bok (DELETE /books/id)
+    private static void deleteBook() {
+        System.out.print("Skriv in ID på bok som ska tas bort: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();  // Clear buffer
+
+        try {
+            URL url = new URL(BASE_URL + "/" + id);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("DELETE");
+
+            int responseCode = connection.getResponseCode();
+            if (responseCode == 204) {
+                System.out.println("Boken med ID " + id + " har tagits bort.");
+            } else {
+                System.out.println("Fel vid borttagning av bok: " + connection.getResponseMessage());
+            }
+        } catch (Exception e) {
+            System.out.println("Fel vid borttagning av bok: " + e.getMessage());
+        }
+    }
 }
+
+

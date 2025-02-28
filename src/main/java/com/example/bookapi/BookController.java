@@ -61,8 +61,14 @@ public class BookController {
     // raderar en bok baserat på dess id
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteBook(@PathVariable Long id) {
-        bookService.deleteBook(id);
-        return ResponseEntity.noContent().build();
+        Optional<Book> book = bookService.getBookById(id);
+
+        if (book.isEmpty()) {
+            return ResponseEntity.notFound().build();  // Return 404 if the book is not found
+        }
+
+        bookService.deleteBook(id);  // Proceed with deletion if the book exists
+        return ResponseEntity.noContent().build();  // Return 204 No Content
     }
 }
 
