@@ -27,7 +27,8 @@ When the application runs, a user interface will appear in your terminal. You wi
 2. Hämta en specifik bok genom titel (Retrieve a specific book by title)
 3. Hämta böcker baserat på kategori (Retrieve books by category)
 4. Skapa en ny bok (Create a new book)
-5. Avsluta (Exit)
+5. Ta bort en bok genom ID (Delete a book by id)
+6. Avsluta (Exit)
    
 Select an option by typing the corresponding number and press Enter. You will then receive feedback on your choice.
 
