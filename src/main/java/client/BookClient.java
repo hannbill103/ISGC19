@@ -134,6 +134,8 @@ public class BookClient {
         String author = scanner.nextLine();
         System.out.print("Skriv in bokbeskrivning: ");
         String description = scanner.nextLine();
+        System.out.print("Skriv in publiceringsår: ");
+        String publishedYear = scanner.nextLine();
         System.out.print("Skriv in kategori (t.ex. IT, MATH, PHYSICS): ");
         String category = scanner.nextLine();
 
@@ -146,8 +148,8 @@ public class BookClient {
 
             // Skapa JSON-sträng för den nya boken
             String jsonInputString = String.format(
-                    "{\"title\": \"%s\", \"author\": \"%s\", \"description\": \"%s\", \"category\": \"%s\"}",
-                    title, author, description, category);
+                    "{\"title\": \"%s\", \"author\": \"%s\", \"description\": \"%s\", \"publishedYear\": \"%s\", \"category\": \"%s\"}",
+                    title, author, description, publishedYear, category);
 
             // Skicka JSON-data till servern
             try (OutputStream os = connection.getOutputStream()) {

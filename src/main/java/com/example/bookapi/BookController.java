@@ -53,6 +53,10 @@ public class BookController {
             return ResponseEntity.badRequest().body("beskrivningen får ej vara mer än 500 ord");
         }
 
+        if (book.getPublishedYear() == null || book.getPublishedYear().trim().isEmpty()) {
+            return ResponseEntity.badRequest().body("Publiceringsår kan ej vara tom");
+        }
+
         // om valideringen är godkänd så sparas boken i databasen
         Book createdBook = bookService.saveBook(book);
         return ResponseEntity.status(201).body(createdBook);
@@ -64,11 +68,11 @@ public class BookController {
         Optional<Book> book = bookService.getBookById(id);
 
         if (book.isEmpty()) {
-            return ResponseEntity.notFound().build();  // Return 404 if the book is not found
+            return ResponseEntity.notFound().build();
         }
 
-        bookService.deleteBook(id);  // Proceed with deletion if the book exists
-        return ResponseEntity.noContent().build();  // Return 204 No Content
+        bookService.deleteBook(id);
+        return ResponseEntity.noContent().build();
     }
 }
 
